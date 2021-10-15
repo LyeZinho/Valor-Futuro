@@ -20,8 +20,14 @@
     Dim DepositoMensal, DepositoAnual As Double
     Dim ValorInicial As Double
 
+
     'Alimentar valores
-    Sub SetPeriod(_input As Integer)
+    'Procedimentos com proposito de coletar valores
+    'e atribuir as variaveis acima usa dos conceitos
+    'de programação orientada a objeto
+    'ENCAPSULAMENTO, HERANÇA
+    Sub SetPeriod(_input As Integer) 'Recebe parametro _input
+        'Atribui a Periodo o valor de _input
         Periodo = _input
     End Sub
 
@@ -48,8 +54,9 @@
     'Operações e calculos
     Function YearlyFV() As Double
         Dim Result As Double
+        'Result recebe o valor do seguinte calculo
         Result = DepositoAnual * (((1 + TaxaAnual) ^ Periodo - 1) / TaxaAnual) + ValorInicial * (1 + TaxaAnual) ^ Periodo
-        Return Result
+        Return Result 'retorna Result
     End Function
 
     Function MonthlyFV() As Double
