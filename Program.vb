@@ -187,13 +187,20 @@ Module Program
             'que chama-se a função os dados são entregues a result
             result = CalculatorVF.YearlyFV()
 
+            'Exibindo resultado                  Converte para string
             Console.WriteLine("Valor futuro:" + result.ToString + "$")
 
+            'Pergunta se deseja continuar 
             Console.WriteLine("Deseja continuar? sim/nao")
+
             Dim _exit As String = Console.ReadLine()
+
+            'Se sim
             If _exit = "sim" Then
+                'Termina Do
                 Exit Do
             End If
+            'Caso contrario continua e re inicia o ciclo Do Loop
         Loop
 
     End Sub
