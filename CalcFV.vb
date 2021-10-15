@@ -1,9 +1,4 @@
 ﻿Public Module CalculatorVF
-    ''' <summary>
-    ''' Criação biblioteca para calculo valor futuro
-    ''' explicaões de uso
-    ''' </summary>
-
 
     'SetPeriod(_iput As integer)        [Input]
     'SetTaxMonth(_input As Integer)     [Input]
@@ -31,6 +26,7 @@
         Periodo = _input
     End Sub
 
+    'Todos abaixo são o mesmo processo
     Sub SetTaxMonth(_input As Integer)
         TaxaMensal = _input
     End Sub
@@ -59,6 +55,7 @@
         Return Result 'retorna Result
     End Function
 
+    'Abaixo segue a mesma coisa 
     Function MonthlyFV() As Double
         Dim Result As Double
         Result = DepositoMensal * (((1 + TaxaMensal) ^ Periodo - 1) / TaxaMensal) + ValorInicial * (1 + TaxaMensal) ^ Periodo
